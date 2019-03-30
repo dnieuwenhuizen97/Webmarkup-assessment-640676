@@ -1,0 +1,3 @@
+student name : Dylan Nieuwenhuizen
+student number : 640676
+student class : INF1F-B
