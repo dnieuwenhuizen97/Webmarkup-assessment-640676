@@ -4,12 +4,20 @@ body
 	background-color : #f5f5f5;
 	margin : auto;
 }
+#hVideo
+{
+	position : fixed;
+	right : 0;
+	bottom : 0;
+	width : 100%;
+	size : contain;
+	z-index : -1;
+}
 #header1
 {
 	grid-area : header1Tag;
 	text-align : center;
 	background-color : #f5f5ff;
-	border : solid 5px;
 }
 #nav
 {
@@ -21,6 +29,7 @@ main
 	grid-area : mainTag;
 	border : solid 5px;
 	margin-top : 100px;
+	background-color : #f5f5f5;
 }
 ul
 {
@@ -47,11 +56,19 @@ a:hover
 }
 #over
 {
+	grid-area : overTag;
 	text-align : center;
 }
 #section1
 {
-	padding : 0px;
+	display : grid;
+	
+	
+	grid-template-areas:
+	"overTag		overTag		overTag		overTag		overTag		overTag		"
+	"article1Tag	article1Tag	article1Tag	aside1Tag	aside1Tag	aside1Tag	"
+	"article1Tag	article1Tag	article1Tag	aside2Tag	aside2Tag	aside2Tag	"
+	"footerTag		footerTag	footerTag	footerTag	footerTag	footerTag	"
 }
 article
 {
@@ -59,30 +76,32 @@ article
 }
 #article1
 {
+	grid-area : article1Tag;
 	border : solid 5px;
 	padding : 10px;
-	margin-left : 20px;
-	margin-bottom : 50px;
-	width : 40%;
-	float : left;
+	max-width : 70%;
+	margin : 20px;
 }
 #aside1
 {
-	float : right;
-	border : solid 5px;
-	margin-right : 20px;
-}
-#footer1
-{
-	clear : both;
+	grid-area : aside1Tag;
 	border : solid 5px;
 	margin : 20px;
 	padding : 10px;
-	text-align : center;
 }
-#kerk
+#aside2
 {
-	float : left;
+	grid-area : aside2Tag;
+	border : solid 5px;
+	margin : 20px;
+	padding : 10px;
+}
+#footer1
+{
+	grid-area : footer1Tag;
+	padding : 10px;
+	text-align : center;
+	margin : 20px;
 }
 #hWater
 {
@@ -99,27 +118,35 @@ article
 	grid-area : section2Tag;
 	border : solid 5px;
 	margin-top : 100px;
+	background-color : #f5f5f5;
+	
 }
 #article2
 {
 	float : left;
 	width : 40%;
 	border : solid 5px;
-	margin-left : 20px;
-	margin-bottom : 20px;
+	margin-left : 30px;
+	margin-bottom : 50px;
 	padding : 10px;
 }
-#aside3, #aside4
+#aside3, #aside4, #aside5
 {
-	float : left;
-	margin-left : 40px;
-	margin-bottom : 20px;
+	float : right;
+	margin-right : 30px;
+	margin-bottom : 10px;
 	padding : 10px;
 	border : solid 5px;
 }
+#footer2
+{
+	grid-area : footer2Tag;
+	padding : 10px;
+	text-align : center;
+	margin : 20px;
+}
 #grid
 {
-	border : solid 10px;
 	padding : 10px;
 	
 	display : grid;
