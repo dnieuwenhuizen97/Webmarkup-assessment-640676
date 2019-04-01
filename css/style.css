@@ -4,70 +4,131 @@ body
 	background-color : #f5f5f5;
 	margin : auto;
 }
-#over
-{
-	grid-area : headerTag;
-	text-align : center;
-}
 #header1
 {
+	grid-area : header1Tag;
 	text-align : center;
-	background-color : #444;
+	background-color : #f5f5ff;
+	border : solid 5px;
 }
-nav
+#nav
 {
-	background-color : #aaa;
-}
-li
-{
-	list-style : none;
+	grid-area : navTag;
+	background-color : #2699fb;
 }
 main
 {
-	font-size : 120%;
+	grid-area : mainTag;
+	border : solid 5px;
+	margin-top : 100px;
+}
+ul
+{
+	list-style : none;
+	margin : 0;
+	padding : 0;
+}
+li
+{
+	float : left;
+}
+li a
+{
+	display : block;
+	color : #000;
+	padding : 20px;
+	text-decoration : none;
+	font-size : 1.5em;
+}
+a:hover
+{
+	color : #aaa;
+	background-color : #000;
+}
+#over
+{
+	text-align : center;
 }
 #section1
 {
-	grid-area : section1Tag;
+	padding : 0px;
+}
+article
+{
+	font-size : 120%;
+}
+#article1
+{
 	border : solid 5px;
 	padding : 10px;
+	margin-left : 20px;
+	margin-bottom : 50px;
+	width : 40%;
+	float : left;
+}
+#aside1
+{
+	float : right;
+	border : solid 5px;
+	margin-right : 20px;
+}
+#footer1
+{
+	clear : both;
+	border : solid 5px;
+	margin : 20px;
+	padding : 10px;
+	text-align : center;
+}
+#kerk
+{
+	float : left;
+}
+#hWater
+{
+	clear : both;
+	float : left;
+	padding-top : 2px;
+}
+#oudeStad
+{
+	text-align : center;
 }
 #section2
 {
 	grid-area : section2Tag;
 	border : solid 5px;
-	padding : 10px;
+	margin-top : 100px;
 }
-#footer1
+#article2
 {
-	grid-area : footer1Tag;
+	float : left;
+	width : 40%;
 	border : solid 5px;
+	margin-left : 20px;
+	margin-bottom : 20px;
 	padding : 10px;
 }
-article
+#aside3, #aside4
 {
-	grid-area : articleTag;
+	float : left;
+	margin-left : 40px;
+	margin-bottom : 20px;
+	padding : 10px;
 	border : solid 5px;
-	padding : 10px;
-}
-#kerk
-{
-	float : right;
 }
 #grid
 {
-	clear : both;
-	background-color : #2699fb;
 	border : solid 10px;
 	padding : 10px;
 	
 	display : grid;
-	grid-template-columns : repeat(6, 1fr);
-	grid-gap : 10px;
+	
+	justify-content : center;
 	
 	grid-template-areas:
-		"headerTag headerTag headerTag headerTag headerTag headerTag"
-		"section1Tag section1Tag section1Tag articleTag articleTag articleTag"
-		"section2Tag section2Tag section2Tag articleTag articleTag articleTag"
-		"footer1Tag footer1Tag footer1Tag footer1Tag footer1Tag footer1Tag"
+		"header1Tag		header1Tag	header1Tag	header1Tag	header1Tag	header1Tag	"
+		"navTag			navTag		navTag		navTag		navTag		navTag		"
+		"mainTag		mainTag		mainTag		mainTag		mainTag		mainTag		"
+		"section2Tag	section2Tag	section2Tag	section2Tag	section2Tag	section2Tag	"
 }
