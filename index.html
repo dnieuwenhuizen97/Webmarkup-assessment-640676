@@ -14,6 +14,11 @@
 			href="css/style.css"
 		/>
 		
+		<!-- favicons -->
+		<link rel="icon" href="img/fav/kimono_win.ico" sizes="32x32 48x48">
+		<link rel="icon" href="img/fav/kimono_mac.ico" sizes="128x128">
+		<link rel="icon" href="img/fav/kimono_ios.ico" sizes="57x57">
+		
 		<!-- titel -->
 		<title>Zelfverdediging - Welkom in Haarlem</title>
 	</head>
@@ -340,11 +345,13 @@
 				</p>
 			</article>
 			<aside id="asideRef">
-				<img
-					src="img/hwa.png"
-					title="www.taekwon.nl/brazilian-jiu-jitsu"
-					alt="HWA logo"
-				/>
+				<a href=https://www.taekwon.nl/brazilian-jiu-jitsu/>
+					<img
+						src="img/hwa.png"
+						title="www.taekwon.nl/brazilian-jiu-jitsu"
+						alt="HWA logo"
+					/>
+				</a>
 				<p>
 					HWA verzorgt een speciaal programma voor zowel jeugd als volwassenen. De training zeer snel en effectief toe te passen doordat het programma een vrij lage drempel heeft. Hierdoor is de sport dus ook voor iedereen toegankelijk.
 				</p>
@@ -356,7 +363,42 @@
 				&copy;640676 Inc.
 			</footer>
 		</section>
-			
+		
+		<!-- contact form -->
+		<section id="sectionCon">
+			<header id="contact">
+				<h2>
+					Contact
+				</h2>
+			</header>
+			<form action="http://witan.nl/inholland/testform.php">
+				<fieldset>
+					<legend>
+						Heeft u nog vragen of opmerkingen voor ons? Neem dan gerust contact met ons op.
+					</legend>
+					<input
+						type="text"
+						name="name"
+						placeholder="Voor- en achternaam"
+						required
+					/>
+					<input
+						type="email"
+						name="email"
+						placeholder="e-mail adres"
+						required
+					/>
+					<textarea
+						name="message" 
+						placeholder="Uw vraag/opmerking"
+						required
+						>
+					</textarea>
+					<input
+						type="submit" 
+						value="submit"
+						
+					/>
 			
 	</body>
 </html>
