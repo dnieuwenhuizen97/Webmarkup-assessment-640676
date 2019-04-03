@@ -262,7 +262,7 @@ footer
 		"sectionRefTag	"
 		"sectionConTag	";
 }
-@media screen and (min-width : 960px)
+@media only screen and (min-width : 960px)
 {
 	body
 	{
@@ -329,8 +329,14 @@ footer
 		"articleRefTag	articleRefTag	articleRefTag	articleRefTag	asideRefTag		asideRefTag	"
 		"footerRefTag	footerRefTag	footerRefTag	footerRefTag	footerRefTag	footerRefTag";
 	}
+	input
+	{
+		float : left;
+		clear : both;
+		margin : 30px;;
+	}
 }
-@media screen and (min-width : 400px) and (max width : 959px)
+@media only screen and (min-width : 400px) and (max width : 959px)
 {
 	body
 	{
