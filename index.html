@@ -3,6 +3,7 @@
 	<head>
 		<!-- meta informatie -->
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
 		<meta name="keywords" content="Haarlem, centrum, oude stad, sport, noord-holland, mudo, historie, cultuur" />
 		<meta name="description" content="website over de oude stad van haarlem, de omgeving, bezienswaardigheden en verschillende sportclubs in de buurt" />
 		<meta name="author" content="Dylan Nieuwenhuizen" />
@@ -30,9 +31,23 @@
 		<!-- header -->
 		<header id="header1">
 			<img
-				src="img/hhuizen.png"
-				title="header foto haarlem"
+				class="pc"
+				src="img/hhuizenHigh.png"
+				title="header foto Haarlem pc"
 				alt="huizen aan het water in Haarlem"
+			/>
+			<img
+				class="tablet"
+				src="img/hhuizenMiddle.png"
+				title="header foto Haarlem tablet"
+				alt="huizen aan het water in haarlem"
+			/>
+			<img
+				class="mobile"
+				id="hdrMobile"
+				src="img/hhuizenLow.png"
+				title="header foto Haarlem mobile"
+				alt="huizen aan het water in haarlem"
 			/>
 			<h1>
 				Welkom in Haarlem!
@@ -44,7 +59,14 @@
 		
 		<!-- navigate -->
 		<nav id="nav">
-			<ul>
+			<label for="hamburgercheck">
+				&#9776;
+			</label>
+			<input
+				type="checkbox"
+				id="hamburgercheck"
+			/>
+			<ul id="ulNav">
 				<li>
 					<a class="aNav" href="#over">Over Haarlem</a>
 				</li>
@@ -78,15 +100,41 @@
 				</article>
 				<aside id="aside1">
 					<img
-						src="img/kerk.png"
-						title="Kerk Haarlem"
+						class="pc"
+						src="img/kerkHigh.png"
+						title="Kerk Haarlem pc"
+						alt="Afbeelding grote kerk Haarlem"
+					/>
+					<img
+						class="tablet"
+						src="img/kerkMiddle.png"
+						title="Kerk Haarlem tablet"
+						alt="Afbeelding grote kerk Haarlem"
+					/>
+					<img
+						class="mobile"
+						src="img/kerkLow.png"
+						title="Kerk Haarlem mobile"
 						alt="Afbeelding grote kerk Haarlem"
 					/>
 				</aside>
 				<aside id="aside2">
 					<img
-						src="img/hWater.png"
-						title="water Haarlem"
+						class="pc"
+						src="img/hWaterHigh.png"
+						title="water Haarlem pc"
+						alt="bootjes aan het water in Haarlem"
+					/>
+					<img
+						class="tablet"
+						src="img/hWaterMiddle.png"
+						title="water Haarlem tablet"
+						alt="bootjes aan het water in Haarlem"
+					/>
+					<img
+						class="mobile"
+						src="img/hWaterLow.png"
+						title="water Haarlem mobile"
 						alt="bootjes aan het water in Haarlem"
 					/>
 				</aside>
@@ -123,13 +171,27 @@
 			</article>
 			<aside id="aside3">
 				<img
-					src="img/ophaalbrug.png"
-					title="ophaalbrug"
+					class="pc"
+					src="img/ophaalbrugHigh.png"
+					title="ophaalbrug pc"
+					alt="ophaalbrug boven het Spaarne"
+				/>
+				<img
+					class="tablet"
+					src="img/ophaalbrugMiddle.png"
+					title="ophaalbrug tablet"
+					alt="ophaalbrug boven het Spaarne"
+				/>
+				<img
+					class="mobile"
+					src="img/ophaalbrugLow.png"
+					title="ophaalbrug mobile"
 					alt="ophaalbrug boven het Spaarne"
 				/>
 			</aside>
 			<aside id="aside4">
 				<img
+					class="pc"
 					src="img/kerk2.png"
 					title="Sint Bavo kerk Haarlem"
 					alt="Sint Bavo kerk vanuit zijstraat"
@@ -137,9 +199,22 @@
 			</aside>
 			<aside id="aside5">
 				<img
-					src="img/adriaan.png"
-					title="Adriaan molen Haarlem"
-					alt="afbeelding van de Adriaan Molen aan het water in Haarlem"
+					class="pc"
+					src="img/adriaanHigh.png"
+					title="Adriaan molen Haarlem pc"
+					alt="Adriaan Molen aan het water in Haarlem"
+				/>
+				<img
+					class="tablet"
+					src="img/adriaanMiddle.png"
+					title="Adriaan molen Haarlem tablet"
+					alt="Adriaan Molen aan het water in Haarlem"
+				/>
+				<img
+					class="mobile"
+					src="img/adriaanLow.png"
+					title="Adriaan molen Haarlem mobile"
+					alt="Adriaan Molen aan het water in Haarlem"
 				/>
 			</aside>
 			<footer id="footer2">
@@ -168,7 +243,20 @@
 			<aside id="asideKAV">
 				<a href=http://www.kavholland.nl/>
 					<img
-						src="img/atletiek.png"
+						class="pc"
+						src="img/atletiekHigh.png"
+						title="www.kavholland.nl"
+						alt="atletiekbaan startpunt"
+					/>
+					<img
+						class="tablet"
+						src="img/atletiekMiddle.png"
+						title="www.kavholland.nl"
+						alt="atletiekbaan startpunt"
+					/>
+					<img
+						class="mobile"
+						src="img/atletiekLow.png"
 						title="www.kavholland.nl"
 						alt="atletiekbaan startpunt"
 					/>
@@ -185,7 +273,20 @@
 			<aside id="asideDSS">
 				<a href=http://dsshonksoftbal.nl/>
 					<img
-						src="img/honkbal.png"
+						class="pc"
+						src="img/honkbalHigh.png"
+						title="www.dsshonksoftbal.nl"
+						alt="honkbal op veld"
+					/>
+					<img
+						class="tablet"
+						src="img/honkbalMiddle.png"
+						title="www.dsshonksoftbal.nl"
+						alt="honkbal op veld"
+					/>
+					<img
+						class="mobile"
+						src="img/honkbalLow.png"
 						title="www.dsshonksoftbal.nl"
 						alt="honkbal op veld"
 					/>
@@ -202,7 +303,20 @@
 			<aside id="asideBato">
 				<a href=https://www.batohaarlem.nl/>
 					<img
-						src="img/gym.png"
+						class="pc"
+						src="img/gymHigh.png"
+						title="www.batohaarlem.nl"
+						alt="persoon die aan ringen hangt"
+					/>
+					<img
+						class="tablet"
+						src="img/gymMiddle.png"
+						title="www.batohaarlem.nl"
+						alt="persoon die aan ringen hangt"
+					/>
+					<img
+						class="mobile"
+						src="img/gymLow.png"
 						title="www.batohaarlem.nl"
 						alt="persoon die aan ringen hangt"
 					/>
@@ -219,7 +333,20 @@
 			<aside id="asideHFC">
 				<a href=https://www.haarlem-kennemerland.nl/>
 					<img
-						src="img/voetbal.png"
+						class="pc"
+						src="img/voetbalHigh.png"
+						title="www.haarlem-kennemerland.nl"
+						alt="voetballende jongens op voetbalveld"
+					/>
+					<img
+						class="tablet"
+						src="img/voetbalMiddle.png"
+						title="www.haarlem-kennemerland.nl"
+						alt="voetballende jongens op voetbalveld"
+					/>
+					<img
+						class="mobile"
+						src="img/voetbalLow.png"
 						title="www.haarlem-kennemerland.nl"
 						alt="voetballende jongens op voetbalveld"
 					/>
@@ -236,7 +363,20 @@
 			<aside id="asideHKC">
 				<a href=http://www.hkc-haarlem.nl/>
 					<img
-						src="img/korfbal.png"
+						class="pc"
+						src="img/korfbalHigh.png"
+						title="www.hkc-haarlem.nl"
+						alt="kofbalspelers vechten om de bal"
+					/>
+					<img
+						class="tablet"
+						src="img/korfbalMiddle.png"
+						title="www.hkc-haarlem.nl"
+						alt="kofbalspelers vechten om de bal"
+					/>
+					<img
+						class="mobile"
+						src="img/korfbalLow.png"
 						title="www.hkc-haarlem.nl"
 						alt="kofbalspelers vechten om de bal"
 					/>
@@ -253,7 +393,20 @@
 			<aside id="asideHWA">
 				<a href=https://www.taekwon.nl/>
 					<img
-						src="img/martialart.png"
+						class="pc"
+						src="img/martialartHigh.png"
+						title="www.taekwon.nl"
+						alt="man die tegen boksbal trapt"
+					/>
+					<img
+						class="tablet"
+						src="img/martialartMiddle.png"
+						title="www.taekwon.nl"
+						alt="man die tegen boksbal trapt"
+					/>
+					<img
+						class="mobile"
+						src="img/martialartLow.png"
 						title="www.taekwon.nl"
 						alt="man die tegen boksbal trapt"
 					/>
@@ -270,7 +423,20 @@
 			<aside id="asideSax">
 				<a href=https://www.saxenburg.nl/>
 					<img
-						src="img/hockey.png"
+						class="pc"
+						src="img/hockeyHigh.png"
+						title="www.saxenburg.nl"
+						alt="bal en spelers komen op keeper af"
+					/>
+					<img
+						class="tablet"
+						src="img/hockeyMiddle.png"
+						title="www.saxenburg.nl"
+						alt="bal en spelers komen op keeper af"
+					/>
+					<img
+						class="mobile"
+						src="img/hockeyLow.png"
 						title="www.saxenburg.nl"
 						alt="bal en spelers komen op keeper af"
 					/>
@@ -287,7 +453,20 @@
 			<aside id="asideHRC">
 				<a href=https://www.hrc-excelsior.nl/>
 					<img
-						src="img/wielren.png"
+						class="pc"
+						src="img/wielrenHigh.png"
+						title="www.hrc-excelsior.nl"
+						alt="wielrenners die door bocht racen"
+					/>
+					<img
+						class="tablet"
+						src="img/wielrenMiddle.png"
+						title="www.hrc-excelsior.nl"
+						alt="wielrenners die door bocht racen"
+					/>
+					<img
+						class="mobile"
+						src="img/wielrenLow.png"
 						title="www.hrc-excelsior.nl"
 						alt="wielrenners die door bocht racen"
 					/>
@@ -304,7 +483,20 @@
 			<aside id="asideKVS">
 				<a href=https://www.kvspaarndam.nl/>
 					<img
-						src="img/kano.png"
+						class="pc"
+						src="img/kanoHigh.png"
+						title="www.kvspaarndam.nl"
+						alt="vrouw in kano"
+					/>
+					<img
+						class="tablet"
+						src="img/kanoMiddle.png"
+						title="www.kvspaarndam.nl"
+						alt="vrouw in kano"
+					/>
+					<img
+						class="mobile"
+						src="img/kanoLow.png"
 						title="www.kvspaarndam.nl"
 						alt="vrouw in kano"
 					/>
@@ -321,7 +513,20 @@
 			<aside id="asideHLTC">
 				<a href=https://www.hltc.nl/>
 					<img
-						src="img/tennis.png"
+						class="pc"
+						src="img/tennisHigh.png"
+						title="www.hltc.nl"
+						alt="vrouw die tennisbal serveert"
+					/>
+					<img
+						class="tablet"
+						src="img/tennisMiddle.png"
+						title="www.hltc.nl"
+						alt="vrouw die tennisbal serveert"
+					/>
+					<img
+						class="mobile"
+						src="img/tennisLow.png"
 						title="www.hltc.nl"
 						alt="vrouw die tennisbal serveert"
 					/>
@@ -347,15 +552,30 @@
 			<aside id="asideRef">
 				<a href=https://www.taekwon.nl/brazilian-jiu-jitsu/>
 					<img
-						src="img/hwa.png"
+						class="pc"
+						src="img/hwaHigh.png"
+						title="www.taekwon.nl/brazilian-jiu-jitsu"
+						alt="HWA logo"
+					/>
+					<img
+						class="tablet"
+						id="hwaTab"
+						src="img/hwaMiddle.png"
+						title="www.taekwon.nl/brazilian-jiu-jitsu"
+						alt="HWA logo"
+					/>
+					<img
+						class="mobile"
+						id="hwaMob"
+						src="img/hwaLow.png"
 						title="www.taekwon.nl/brazilian-jiu-jitsu"
 						alt="HWA logo"
 					/>
 				</a>
-				<p>
+				<p class="asRef">
 					HWA verzorgt een speciaal programma voor zowel jeugd als volwassenen. De training zeer snel en effectief toe te passen doordat het programma een vrij lage drempel heeft. Hierdoor is de sport dus ook voor iedereen toegankelijk.
 				</p>
-				<p>
+				<p class="asRef">
 					Wilt u meer weten over Brazilian Jiu Jitsu en HWA-Rang Dragon of wilt u zich meteen inschrijven voor één van hun trainingsprogramma&apos;s? Bezoek dan snel hun <a class="aRef" href=https://www.taekwon.nl/brazilian-jiu-jitsu/>website</a>.
 				</p>
 			</aside>
@@ -371,37 +591,69 @@
 					Contact
 				</h2>
 			</header>
-			<form action="http://witan.nl/inholland/testform.php">
+			<form action="http://witan.nl/inholland/testform.php" method="post">
 				<fieldset>
-					<legend>
+					<legend class="pc">
 						Heeft u nog vragen of opmerkingen voor ons? Neem dan gerust contact met ons op.
 					</legend>
-					<input
-						type="text"
-						name="name"
-						placeholder="Voor- en achternaam"
-						required
-					/>
-					<input
-						type="email"
-						name="email"
-						placeholder="e-mail adres"
-						required
-					/>
-					<input
-						type="text"
-						name="message" 
-						placeholder="Uw vraag/opmerking"
-						required
-						>
-					</textarea>
-					<input
+					<legend class="tablet">
+						Neem contact met ons op
+					</legend>
+					<legend class="mobile">
+						Neem contact met ons op
+					</legend>
+					<p>
+						Uw voor- en achternaam&#42;:
+					</p>
+					<p class="txtInput">
+						<input
+							type="text"
+							name="name"
+							placeholder="Voor- en achternaam"
+							required
+						/>
+					</p>
+					<p>
+						Uw E-mail adres&#42;:
+					</p>
+					<p class="txtInput">
+						<input
+							type="email"
+							name="email"
+							placeholder="Email adres"
+							required
+						/>
+					</p>
+					<p>
+						Uw vraag/opmerking:
+					</p>
+					<p class="txtInput">
+						<textarea class="pc" name="message" rows="10" cols="100" placeholder="Type hier uw vraag/opmerking..."></textarea>
+						<textarea class="tablet" name="message" rows="10" cols="50" placeholder="Type hier uw vraag/opmerking..."></textarea>
+						<textarea class="mobile" name="message" rows="10" cols="30" placeholder="Type hier uw vraag/opmerking..."></textarea>
+					</p>
+					<button
 						type="submit" 
 						value="submit"
+						>verzend
 						
-					/>
+					</button>
 				</fieldset>
 			</form>
+			<footer>
+				&copy;640676 Inc.
+			</footer>
+		</section>
+		
+		<!-- footer -->
+		<footer id="endFooter">
+			<p>
+				Webpage by Dylan Nieuwenhuizen
+			</p>
+			<p>
+				&copy;640676 Inc.
+			</p>
+		</footer>
 			
 	</body>
 </html>

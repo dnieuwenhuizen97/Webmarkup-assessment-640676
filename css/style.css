@@ -1,7 +1,3 @@
-img
-{
-	max-width : 100%;
-}
 header
 {
 	text-align : center;
@@ -32,7 +28,7 @@ main
 	margin-top : 100px;
 	background-color : #f5f5f5;
 }
-#section2, #sectionSport, #sectionRef, #sectionCon
+#section2, #sectionSport, #sectionRef, #sectionCon, #endFooter
 {
 	border : solid 5px;
 	margin-top : 100px;
@@ -43,10 +39,6 @@ ul
 	list-style : none;
 	margin : 0;
 	padding : 0;
-}
-li
-{
-	float : left;
 }
 .aNav
 {
@@ -101,16 +93,9 @@ li
 {
 	grid-area : article2Tag;
 }
-article, aside
-{
-	padding : 10px;
-	border : solid 5px;
-	margin : 20px;
-}
 footer
 {
 	padding : 10px;
-	margin : 20px;
 	text-align : center;
 }
 #aside3
@@ -245,6 +230,23 @@ footer
 {
 	grid-area : sectionConTag;
 }
+#endFooter
+{
+	grid-area : endFooterTag;
+}
+button
+{
+	background-color : #2699fb;
+	cursor : pointer;
+	border : none;
+	border-radius : 1.2em;
+}
+input, textarea
+{
+	background : none;
+	border : none;
+	border-bottom : solid 1px;
+}
 #grid
 {
 	padding : 10px;
@@ -260,14 +262,33 @@ footer
 		"section2Tag	"
 		"sectionSportTag"
 		"sectionRefTag	"
-		"sectionConTag	";
+		"sectionConTag	"
+		"endFooterTag	";
 }
-@media only screen and (min-width : 960px)
+@media screen and (min-width : 960px)
 {
+	.tablet, .mobile
+	{
+		display : none;
+	}
 	body
 	{
 		width : 960px;
 		margin : auto;
+	}
+	#hamburgercheck, label
+	{
+		display : none;
+	}
+	li
+	{
+		float : left;
+	}
+	article, aside
+	{
+		padding : 10px;
+		border : solid 5px;
+		margin : 20px;
 	}
 	article
 	{
@@ -286,91 +307,223 @@ footer
 		display : grid;
 		
 		grid-template-areas :
-		"overTag		overTag		overTag		overTag		overTag		overTag		"
-		"article1Tag	article1Tag	aside1Tag	aside1Tag	aside1Tag	aside1Tag	"
-		"article1Tag	article1Tag	aside2Tag	aside2Tag	aside2Tag	aside2Tag	"
-		"footerTag		footerTag	footerTag	footerTag	footerTag	footerTag	";
+		"overTag		overTag		"
+		"article1Tag	aside1Tag	"
+		"article1Tag	aside2Tag	"
+		"footerTag		footerTag	";
 	}
 	#section2
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"oudeTag		oudeTag		oudeTag		oudeTag		oudeTag		oudeTag		"
-		"article2Tag	article2Tag	aside3Tag	aside3Tag	aside3Tag	aside3Tag	"
-		"article2Tag	article2Tag	aside4Tag	aside4Tag	aside4Tag	aside4Tag	"
-		"article2Tag	article2Tag	aside5Tag	aside5Tag	aside5Tag	aside5Tag	"
-		"footer2Tag		footer2Tag	footer2Tag	footer2Tag	footer2Tag	footer2Tag	";
+		"oudeTag		oudeTag		"
+		"article2Tag	aside3Tag	"
+		"article2Tag	aside4Tag	"
+		"article2Tag	aside5Tag	"
+		"footer2Tag		footer2Tag	";
 	}
 	#sectionSport
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"sportTag		sportTag		sportTag		sportTag		sportTag		sportTag	"
-		"articleKAVTag	articleKAVTag	articleKAVTag	asideKAVTag		asideKAVTag		asideKAVTag	"
-		"articleDSSTag	articleDSSTag	articleDSSTag	asideDSSTag		asideDSSTag		asideDSSTag	"
-		"articleBatoTag	articleBatoTag	articleBatoTag	asideBatoTag	asideBatoTag	asideBatoTag"
-		"articleHFCTag	articleHFCTag	articleHFCTag	asideHFCTag		asideHFCTag		asideHFCTag	"
-		"articleHKCTag	articleHKCTag	articleHKCTag	asideHKCTag		asideHKCTag		asideHKCTag	"
-		"articleHWATag	articleHWATag	articleHWATag	asideHWATag		asideHWATag		asideHWATag	"
-		"articleSaxTag	articleSaxTag	articleSaxTag	asideSaxTag		asideSaxTag		asideSaxTag	"
-		"articleHRCTag	articleHRCTag	articleHRCTag	asideHRCTag		asideHRCTag		asideHRCTag	"
-		"articleKVSTag	articleKVSTag	articleKVSTag	asideKVSTag		asideKVSTag		asideKVSTag	"
-		"articleHLTCTag	articleHLTCTag	articleHLTCTag	asideHLTCTag	asideHLTCTag	asideHLTCTag"
-		"footer3Tag		footer3Tag		footer3Tag		footer3Tag		footer3Tag		footer3Tag	";
+		"sportTag		sportTag		"
+		"articleKAVTag	asideKAVTag		"
+		"articleDSSTag	asideDSSTag		"
+		"articleBatoTag	asideBatoTag	"
+		"articleHFCTag	asideHFCTag		"
+		"articleHKCTag	asideHKCTag		"
+		"articleHWATag	asideHWATag		"
+		"articleSaxTag	asideSaxTag		"
+		"articleHRCTag	asideHRCTag		"
+		"articleKVSTag	asideKVSTag		"
+		"articleHLTCTag	asideHLTCTag	"
+		"footer3Tag		footer3Tag		";
 	}
 	#sectionRef
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"referralTag	referralTag		referralTag		referralTag		referralTag		referralTag	"
-		"articleRefTag	articleRefTag	articleRefTag	articleRefTag	asideRefTag		asideRefTag	"
-		"footerRefTag	footerRefTag	footerRefTag	footerRefTag	footerRefTag	footerRefTag";
+		"referralTag	referralTag		referralTag		referralTag	"
+		"articleRefTag	articleRefTag	articleRefTag	asideRefTag	"
+		"footerRefTag	footerRefTag	footerRefTag	footerRefTag";
 	}
-	input
+	fieldset
 	{
-		float : left;
-		clear : both;
-		margin : 30px;;
+		margin : 30px;
+	}
+	.txtInput
+	{
+		margin-bottom : 50px;
+	}
+	button
+	{
+		padding : 20px;
+		width : 15%;
 	}
 }
-@media only screen and (min-width : 400px) and (max width : 959px)
+@media screen and (min-width : 400px) and (max-width : 959px)
 {
+	.pc, .mobile
+	{
+		display : none;
+	}
 	body
 	{
-		max-width : 400px;
+		width : 400px;
+		margin : auto;
+		font-size : 75%;
+	}
+	article, aside
+	{
+		margin : 10px;
 	}
 	article
 	{
 		font-size : 100%;
+	}
+	#hamburgercheck, label
+	{
+		display : none;
+	}
+	li
+	{
+		float : left;
 	}
 	#section1
 	{
 		display : grid;
 	
 		grid-template-areas :
-		"overTag		"
-		"article1Tag	"
-		"aside1Tag		"
-		"aside2Tag		"
-		"footerTag		";
+		"overTag		overTag		"
+		"article1Tag	article1Tag	"
+		"aside1Tag		aside2Tag	"
+		"footerTag		footer1Tag	";
 	}
 	#section2
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"oudeTag		"
-		"article2Tag	"
-		"aside3Tag		"
-		"aside4Tag		"
-		"aside5Tag		"
-		"footer2Tag		";
+		"oudeTag		oudeTag		"
+		"article2Tag	article2Tag	"
+		"aside3Tag		aside5Tag	"
+		"footer2Tag		footer2Tag	";
 	}
 	#sectionSport
 	{
+		display : grid;
 		
+		grid-template-areas :
+		"sportTag		sportTag		"
+		"articleKAVTag	asideKAVTag		"
+		"articleDSSTag	asideDSSTag		"
+		"articleBatoTag	asideBatoTag	"
+		"articleHFCTag	asideHFCTag		"
+		"articleHKCTag	asideHKCTag		"
+		"articleHWATag	asideHWATag		"
+		"articleSaxTag	asideSaxTag		"
+		"articleHRCTag	asideHRCTag		"
+		"articleKVSTag	asideKVSTag		"
+		"articleHLTCTag	asideHLTCTag	"
+		"footer3Tag		footer3Tag		";	
+	}
+	#hwaTab
+	{
+		float : right;
+	}
+	button
+	{
+		padding : 2%;
+		width : 20%;
+	}
+}
+@media screen and (max-width : 399px)
+{
+	body
+	{
+		width : 100%;
+		font-size : 60%;
+		margin : auto;
+	}
+	.pc, .tablet
+	{
+		display : none;
+	}
+	article, aside
+	{
+		margin : 5px;
+	}
+	#hamburgercheck
+	{
+		display : none;
+	}
+	label
+	{
+		cursor : pointer;
+		font-size : 200%;
+		margin-left : 1%;
+	}
+	#ulNav
+	{
+		display : none;
+	}
+	#ulNav a
+	{
+		text-align : center;
+		border-bottom : solid 1px;
+	}
+	#hamburgercheck:checked + #ulNav
+	{
+		display : block;
+	}
+	#section1
+	{
+		display : grid;
+	
+		grid-template-areas :
+		"overTag		overTag		"
+		"article1Tag	article1Tag	"
+		"aside1Tag		aside2Tag	"
+		"footerTag		footer1Tag	";
+	}
+	#section2
+	{
+		display : grid;
+		
+		grid-template-areas :
+		"oudeTag		oudeTag		"
+		"article2Tag	article2Tag	"
+		"aside3Tag		aside5Tag	"
+		"footer2Tag		footer2Tag	";
+	}
+	#sectionSport
+	{
+		display : grid;
+		
+		grid-template-areas :
+		"sportTag		sportTag		"
+		"articleKAVTag	asideKAVTag		"
+		"articleDSSTag	asideDSSTag		"
+		"articleBatoTag	asideBatoTag	"
+		"articleHFCTag	asideHFCTag		"
+		"articleHKCTag	asideHKCTag		"
+		"articleHWATag	asideHWATag		"
+		"articleSaxTag	asideSaxTag		"
+		"articleHRCTag	asideHRCTag		"
+		"articleKVSTag	asideKVSTag		"
+		"articleHLTCTag	asideHLTCTag	"
+		"footer3Tag		footer3Tag		";
+	}
+	#hwaMob
+	{
+		float : right;
+	}
+	button
+	{
+		padding : 2%;
+		width : 20%;
 	}
 }
