@@ -1,3 +1,22 @@
+/* external fonts */
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans:600|PT+Sans|Roboto');
+
+/* basics */
+h1
+{
+	font-family : 'Archivo Black', "Berlin Sans FB", 'Roboto', sans-serif;
+	color : #444;
+}
+h2
+{
+	font-family : 'Open Sans', arial, 'Roboto', sans-serif;
+	color : #444;
+}
+article, ul, p, footer, legend, input, textarea, button, h5
+{
+	font-family : 'PT Sans', arial, 'Roboto', sans-serif;
+	color : #444;
+}
 header
 {
 	text-align : center;
@@ -10,6 +29,17 @@ header
 	min-width : 100%;
 	min-height : 100%;
 	z-index : -1;
+}
+#cookie
+{
+	position : fixed;
+	right : 0;
+	bottom : 0;
+	margin : 0;
+	padding : 1em;
+	z-index : 1;
+	background-color : #707070;
+	color : #fff;
 }
 #header1
 {
@@ -24,14 +54,15 @@ header
 main
 {
 	grid-area : mainTag;
-	border : solid 5px;
-	margin-top : 100px;
+	border : solid 0.3em;
+	margin-top : 6em;
 	background-color : #f5f5f5;
 }
 #section2, #sectionSport, #sectionRef, #sectionCon, #endFooter
 {
-	border : solid 5px;
-	margin-top : 100px;
+	border : solid 0.3em;
+	border-color : #000;
+	margin-top : 6em;
 	background-color : #f5f5f5;
 }
 ul
@@ -44,7 +75,7 @@ ul
 {
 	display : block;
 	color : #000;
-	padding : 20px;
+	padding : 1em;
 	text-decoration : none;
 }
 .aNav:hover
@@ -61,6 +92,13 @@ ul
 {
 	color : #707070;
 }
+footer
+{
+	padding : 1em;
+	text-align : center;
+}
+
+/* grid tags */
 #over
 {
 	grid-area : overTag;
@@ -92,11 +130,6 @@ ul
 #article2
 {
 	grid-area : article2Tag;
-}
-footer
-{
-	padding : 10px;
-	text-align : center;
 }
 #aside3
 {
@@ -234,6 +267,8 @@ footer
 {
 	grid-area : endFooterTag;
 }
+
+/* form opmaak */
 button
 {
 	background-color : #2699fb;
@@ -245,11 +280,13 @@ input, textarea
 {
 	background : none;
 	border : none;
-	border-bottom : solid 1px;
+	border-bottom : solid 0.05em;
 }
+
+/* body grid */
 #grid
 {
-	padding : 10px;
+	padding : 1em;
 	
 	display : grid;
 	
@@ -265,6 +302,8 @@ input, textarea
 		"sectionConTag	"
 		"endFooterTag	";
 }
+
+/* media query pc */
 @media screen and (min-width : 960px)
 {
 	.tablet, .mobile
@@ -276,6 +315,26 @@ input, textarea
 		width : 960px;
 		margin : auto;
 	}
+	h1
+	{
+		font-size : 3em;
+	}
+	h2
+	{
+		font-size : 2em;
+	}
+	ul
+	{
+		font-size : 1.5em;
+	}
+	.pRef, #cookie, footer
+	{
+		font-size : 0.8em;
+	}
+	article
+	{
+		font-size : 1.1em;
+	}
 	#hamburgercheck, label
 	{
 		display : none;
@@ -286,21 +345,10 @@ input, textarea
 	}
 	article, aside
 	{
-		padding : 10px;
-		border : solid 5px;
-		margin : 20px;
-	}
-	article
-	{
-		font-size : 125%;
-	}
-	a
-	{
-		font-size : 150%;
-	}
-	.aRef
-	{
-		font-size : 100%;
+		padding : 0.8em;
+		border : solid 0.2em;
+		border-color : #000;
+		margin : 1.5em;
 	}
 	#section1
 	{
@@ -360,10 +408,13 @@ input, textarea
 	}
 	button
 	{
-		padding : 20px;
+		padding : 1em;
 		width : 15%;
+		font-size : 1.1em;
 	}
 }
+
+/* media query tablet */
 @media screen and (min-width : 400px) and (max-width : 959px)
 {
 	.pc, .mobile
@@ -378,11 +429,7 @@ input, textarea
 	}
 	article, aside
 	{
-		margin : 10px;
-	}
-	article
-	{
-		font-size : 100%;
+		margin : 0.8em;
 	}
 	#hamburgercheck, label
 	{
@@ -440,6 +487,8 @@ input, textarea
 		width : 20%;
 	}
 }
+
+/* media query mobile */
 @media screen and (max-width : 399px)
 {
 	body
@@ -454,7 +503,7 @@ input, textarea
 	}
 	article, aside
 	{
-		margin : 5px;
+		margin : 0.8em;
 	}
 	#hamburgercheck
 	{
@@ -473,7 +522,7 @@ input, textarea
 	#ulNav a
 	{
 		text-align : center;
-		border-bottom : solid 1px;
+		border-bottom : solid 0.01em;
 	}
 	#hamburgercheck:checked + #ulNav
 	{
