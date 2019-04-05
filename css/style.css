@@ -1,10 +1,14 @@
 /* external fonts */
 @import url('https://fonts.googleapis.com/css?family=Archivo+Black|Open+Sans:600|PT+Sans|Roboto');
-
+@font-face
+{
+	font-family : "coolvetica";
+	src : url(http://zelfverdediging.eu/640676/fonts/coolvetica.ttf);
+}
 /* basics */
 h1
 {
-	font-family : 'Archivo Black', "Berlin Sans FB", 'Roboto', sans-serif;
+	font-family : 'coolvetica', 'Archivo Black', "Berlin Sans FB", 'Roboto', sans-serif;
 	color : #444;
 }
 h2
@@ -41,9 +45,9 @@ header
 	background-color : #707070;
 	color : #fff;
 }
-#header1
+#bigheader
 {
-	grid-area : header1Tag;
+	grid-area : bigheaderTag;
 	background-color : #f5f5ff;
 }
 #nav
@@ -58,7 +62,7 @@ main
 	margin-top : 6em;
 	background-color : #f5f5f5;
 }
-#section2, #sectionSport, #sectionRef, #sectionCon, #endFooter
+#sectionSec, #sectionSport, #sectionRef, #sectionCon, #endFooter
 {
 	border : solid 0.3em;
 	border-color : #000;
@@ -103,49 +107,49 @@ footer
 {
 	grid-area : overTag;
 }
-#article1
+#articleMain
 {
-	grid-area : article1Tag;
+	grid-area : articleMainTag;
 }
-#aside1
+#asideKerk
 {
-	grid-area : aside1Tag;
+	grid-area : asideKerkTag;
 }
-#aside2
+#asideWater
 {
-	grid-area : aside2Tag;
+	grid-area : asideWaterTag;
 }
-#footer1
+#footerMain
 {
-	grid-area : footer1Tag;
+	grid-area : footerMainTag;
 }
-#section2
+#sectionSec
 {
-	grid-area : section2Tag;
+	grid-area : sectionSecTag;
 }
 #oudeStad
 {
 	grid-area : oudeTag;
 }
-#article2
+#articleSec
 {
-	grid-area : article2Tag;
+	grid-area : articleSecTag;
 }
-#aside3
+#asideBrug
 {
-	grid-area : aside3Tag;
+	grid-area : asideBrugTag;
 }
-#aside4
+#asideKerk2
 {
-	grid-area : aside4Tag;
+	grid-area : asideKerk2Tag;
 }
-#aside5
+#asideAd
 {
-	grid-area : aside5Tag;
+	grid-area : asideAdTag;
 }
-#footer2
+#footerSec
 {
-	grid-area : footer2Tag;
+	grid-area : footerSecTag;
 }
 #sectionSport
 {
@@ -235,9 +239,9 @@ footer
 {
 	grid-area : asideHLTCTag;
 }
-#footer3
+#footerSport
 {
-	grid-area : footer3Tag;
+	grid-area : footerSportTag;
 }
 #sectionRef
 {
@@ -293,10 +297,10 @@ input, textarea
 	justify-content : center;
 	
 	grid-template-areas :
-		"header1Tag		"
+		"bigheaderTag	"
 		"navTag			"
 		"mainTag		"
-		"section2Tag	"
+		"sectionSecTag	"
 		"sectionSportTag"
 		"sectionRefTag	"
 		"sectionConTag	"
@@ -350,26 +354,26 @@ input, textarea
 		border-color : #000;
 		margin : 1.5em;
 	}
-	#section1
+	#sectionMain
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"overTag		overTag		"
-		"article1Tag	aside1Tag	"
-		"article1Tag	aside2Tag	"
-		"footerTag		footerTag	";
+		"overTag		overTag			"
+		"articleMainTag	asideKerkTag	"
+		"articleMainTag	asideWaterTag	"
+		"footerTag		footerTag		";
 	}
-	#section2
+	#sectionSec
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"oudeTag		oudeTag		"
-		"article2Tag	aside3Tag	"
-		"article2Tag	aside4Tag	"
-		"article2Tag	aside5Tag	"
-		"footer2Tag		footer2Tag	";
+		"oudeTag		oudeTag			"
+		"articleSecTag	asideBrugTag	"
+		"articleSecTag	asideKerk2Tag	"
+		"articleSecTag	asideAdTag		"
+		"footerSecTag	footerSecTag	";
 	}
 	#sectionSport
 	{
@@ -387,7 +391,7 @@ input, textarea
 		"articleHRCTag	asideHRCTag		"
 		"articleKVSTag	asideKVSTag		"
 		"articleHLTCTag	asideHLTCTag	"
-		"footer3Tag		footer3Tag		";
+		"footerSportTag	footerSportTag	";
 	}
 	#sectionRef
 	{
@@ -408,7 +412,7 @@ input, textarea
 	}
 	button
 	{
-		padding : 1em;
+		padding : 2%;
 		width : 15%;
 		font-size : 1.1em;
 	}
@@ -439,25 +443,25 @@ input, textarea
 	{
 		float : left;
 	}
-	#section1
+	#sectionMain
 	{
 		display : grid;
 	
 		grid-template-areas :
-		"overTag		overTag		"
-		"article1Tag	article1Tag	"
-		"aside1Tag		aside2Tag	"
-		"footerTag		footer1Tag	";
+		"overTag		overTag			"
+		"articleMainTag	articleMainTag	"
+		"asideKerkTag	asideWaterTag	"
+		"footerMainTag	footerMainTag	";
 	}
-	#section2
+	#sectionSec
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"oudeTag		oudeTag		"
-		"article2Tag	article2Tag	"
-		"aside3Tag		aside5Tag	"
-		"footer2Tag		footer2Tag	";
+		"oudeTag		oudeTag			"
+		"articleSecTag	articleSecTag	"
+		"asideBrugTag	asideAdTag		"
+		"footerSecTag	footerSecTag	";
 	}
 	#sectionSport
 	{
@@ -475,7 +479,17 @@ input, textarea
 		"articleHRCTag	asideHRCTag		"
 		"articleKVSTag	asideKVSTag		"
 		"articleHLTCTag	asideHLTCTag	"
-		"footer3Tag		footer3Tag		";	
+		"footerSportTag	footerSportTag	";	
+	}
+	#sectionRef
+	{
+		display : grid;
+		
+		grid-template-areas :
+		"referralTag	"
+		"articleRefTag	"
+		"asideRefTag	"
+		"footerRefTag	";
 	}
 	#hwaTab
 	{
@@ -528,25 +542,25 @@ input, textarea
 	{
 		display : block;
 	}
-	#section1
+	#sectionMain
 	{
 		display : grid;
 	
 		grid-template-areas :
-		"overTag		overTag		"
-		"article1Tag	article1Tag	"
-		"aside1Tag		aside2Tag	"
-		"footerTag		footer1Tag	";
+		"overTag		overTag			"
+		"articleMainTag	articleMainTag	"
+		"asideKerkTag	asideWaterTag	"
+		"footerMainTag	footerMainTag	";
 	}
-	#section2
+	#sectionSec
 	{
 		display : grid;
 		
 		grid-template-areas :
-		"oudeTag		oudeTag		"
-		"article2Tag	article2Tag	"
-		"aside3Tag		aside5Tag	"
-		"footer2Tag		footer2Tag	";
+		"oudeTag		oudeTag			"
+		"articleSecTag	articleSecTag	"
+		"asideBrugTag	asideAdTag		"
+		"footerSecTag	footerSecTag	";
 	}
 	#sectionSport
 	{
@@ -564,7 +578,17 @@ input, textarea
 		"articleHRCTag	asideHRCTag		"
 		"articleKVSTag	asideKVSTag		"
 		"articleHLTCTag	asideHLTCTag	"
-		"footer3Tag		footer3Tag		";
+		"footerSportTag	footerSportTag		";
+	}
+	#sectionRef
+	{
+		display : grid;
+		
+		grid-template-areas :
+		"referralTag	"
+		"articleRefTag	"
+		"asideRefTag	"
+		"footerRefTag	";
 	}
 	#hwaMob
 	{

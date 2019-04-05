@@ -1,2 +1,4 @@
 User-agent: *
-Dissallow: /forbidden
+Disallow: /forbidden
+
+Sitemap: http://zelfverdediging.eu/640676/sitemap.xml
