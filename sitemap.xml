@@ -4,5 +4,30 @@
 		<loc>http://zelfverdediging.eu/640676/</loc>
 		<lastmod>2019-04-05</lastmod>
 		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://zelfverdediging.eu/640676/#over</loc>
+		<lastmod>2019-04-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.7</priority>
+	</url>
+	<url>
+		<loc>http://zelfverdediging.eu/640676/#oudeStad</loc>
+		<lastmod>2019-04-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>http://zelfverdediging.eu/640676/#sport</loc>
+		<lastmod>2019-04-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>http://zelfverdediging.eu/640676/#contact</loc>
+		<lastmod>2019-04-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
 	</url>
 </urlset>
