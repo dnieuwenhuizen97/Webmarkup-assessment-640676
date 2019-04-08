@@ -74,6 +74,7 @@ ul
 	list-style : none;
 	margin : 0;
 	padding : 0;
+	text-align : center;
 }
 .aNav
 {
@@ -345,7 +346,7 @@ input, textarea
 	}
 	li
 	{
-		float : left;
+		display : inline-block;
 	}
 	article, aside
 	{
@@ -441,7 +442,7 @@ input, textarea
 	}
 	li
 	{
-		float : left;
+		display : inline-block;
 	}
 	#sectionMain
 	{
